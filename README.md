@@ -5,7 +5,7 @@
 Gitee:
 https://gitee.com/fsfzp888/cylinder_qrcode
 
-This is a demo project using OPENCV to retify QR code on cylinder, C++ and android project code are provided. Although I don't think it's useful, it's still a good learning material for OPENCV.
+This is a demo project using OPENCV to retify QR code on cylinder surface, C++ and android project code are provided. Although I don't think it's useful, it's still a good learning material for OPENCV.
 
 This project try to retify the qr code on cylinder surface, so that normal scanner could recognize the distorted qr code. However, there are still many problems here. I may not fix them in the future.
 
