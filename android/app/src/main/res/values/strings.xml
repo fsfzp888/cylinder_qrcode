@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">二维码柱面畸变与预处理测试工具</string>
+    <string name="tutorial">摄像头测试</string>
+    <string name="grayScale">灰度变换</string>
+    <string name="colorDetection">颜色斑点检测</string>
+    <string name="adaptiveThresh">自适应阈值二值化</string>
+    <string name="blockSize">掩膜大小</string>
+    <string name="adaptiveValue">49</string>
+    <string name="adaptiveDeltaValue">0</string>
+    <string name="delta">偏移值</string>
+    <string name="getContours">自适应二值化后提取二维码的FinderPattern</string>
+    <string name="OpenClose">开闭运算</string>
+    <string name="doClose">执行闭运算</string>
+    <string name="kernelSize">执行开闭运算的核大小</string>
+    <string name="kernelSizeDefaultValue">9</string>
+    <string name="doOpen">执行开运算</string>
+    <string name="kernelType1">MORPH_RECT</string>
+    <string name="kernelType2">MORPH_CROSS</string>
+    <string name="kernelType3">MORPH_ELLIPSE</string>
+    <string name="binaryThresh">阈值二值化</string>
+    <string name="thresh">阈值</string>
+    <string name="binaryThreshNum">127</string>
+    <string name="qrTest">二维码边缘提取</string>
+    <string name="parabolaRectify">抛物线矫正</string>
+    <string name="perspectiveRectify">透视变换矫正</string>
+    <string name="multiPerspectiveRectify">图形分割透视变换矫正</string>
+    <string name="TryQrDecode">尝试解码</string>
+    <string name="QrResult">识别结果此处显示：</string>
+</resources>

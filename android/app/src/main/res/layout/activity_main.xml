@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.pangomicro.zpfeng.cylinder_qrcode.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tutorial"
+        android:id="@+id/btnStartTutorial"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/colorDetection"
+        android:id="@+id/btnStartColorDetect"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/btnStartTutorial"
+        android:layout_toRightOf="@+id/btnStartTutorial"
+        android:layout_toEndOf="@+id/btnStartTutorial" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/grayScale"
+        android:id="@+id/btnStartGrayScale"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/btnStartColorDetect"
+        android:layout_toRightOf="@+id/btnStartColorDetect"
+        android:layout_toEndOf="@+id/btnStartColorDetect" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adaptiveThresh"
+        android:id="@+id/btnStartAdaptiveThresh"
+        android:layout_below="@+id/btnStartTutorial"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blockSize"
+        android:id="@+id/tvBlockSize"
+        android:layout_below="@+id/btnStartColorDetect"
+        android:layout_alignRight="@+id/btnStartColorDetect"
+        android:layout_alignEnd="@+id/btnStartColorDetect" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etAdaptiveThresh"
+        android:inputType="number"
+        android:text="@string/adaptiveValue"
+        android:layout_alignBottom="@+id/btnStartAdaptiveThresh"
+        android:layout_alignRight="@+id/btnStartColorDetect"
+        android:layout_alignEnd="@+id/btnStartColorDetect" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delta"
+        android:id="@+id/tvDelta"
+        android:layout_alignTop="@+id/tvBlockSize"
+        android:layout_alignRight="@+id/etAdaptiveDelta"
+        android:layout_alignEnd="@+id/etAdaptiveDelta" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etAdaptiveDelta"
+        android:inputType="number"
+        android:text="@string/adaptiveDeltaValue"
+        android:layout_alignBottom="@+id/btnStartAdaptiveThresh"
+        android:layout_alignRight="@+id/btnStartGrayScale"
+        android:layout_alignEnd="@+id/btnStartGrayScale" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/getContours"
+        android:id="@+id/cbGetContours"
+        android:layout_below="@+id/btnStartAdaptiveThresh"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/OpenClose"
+        android:id="@+id/btnStartOpenClose"
+        android:layout_below="@+id/cbGetContours"
+        android:layout_toLeftOf="@+id/btnStartColorDetect"
+        android:layout_toStartOf="@+id/btnStartColorDetect" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_alignTop="@+id/btnStartOpenClose"
+        android:layout_toRightOf="@+id/btnStartOpenClose"
+        android:layout_toEndOf="@+id/btnStartOpenClose">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/doOpen"
+            android:checked="true"
+            android:id="@+id/rbDoOpen"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/doClose"
+            android:id="@+id/rbDoClose"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_toRightOf="@+id/etAdaptiveThresh"
+        android:layout_toEndOf="@+id/etAdaptiveThresh"
+        android:id="@+id/radioGroup2">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kernelType1"
+            android:checked="true"
+            android:id="@+id/rbType1"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kernelType2"
+            android:id="@+id/rbType2"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kernelType3"
+            android:id="@+id/rbType3"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kernelSize"
+        android:id="@+id/tvKernelSize"
+        android:layout_alignBottom="@+id/radioGroup2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etKernelSize"
+        android:inputType="number"
+        android:text="@string/kernelSizeDefaultValue"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignLeft="@+id/tvBlockSize"
+        android:layout_alignStart="@+id/tvBlockSize" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/binaryThresh"
+        android:id="@+id/btnBinaryThresh"
+        android:layout_below="@+id/etKernelSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thresh"
+        android:id="@+id/tvBinaryThresh"
+        android:layout_alignTop="@+id/btnBinaryThresh"
+        android:layout_alignRight="@+id/btnStartAdaptiveThresh"
+        android:layout_alignEnd="@+id/btnStartAdaptiveThresh"
+        android:layout_marginTop="22dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etBinaryThresh"
+        android:inputType="number"
+        android:text="@string/binaryThreshNum"
+        android:layout_alignBottom="@+id/btnBinaryThresh"
+        android:layout_alignLeft="@+id/etKernelSize"
+        android:layout_alignStart="@+id/etKernelSize" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/qrTest"
+        android:id="@+id/btnQrContourExtract"
+        android:layout_below="@+id/btnBinaryThresh"
+        android:layout_marginTop="69dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
